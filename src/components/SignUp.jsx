@@ -13,6 +13,9 @@ const SignUp = () => {
     e.preventDefault();
     alert("Sign Up Successful!");
   };
+  const handleSignUpRedirect = () => {
+    navigate("/login");
+  };
 
   return (
     <div className="signup-container">
@@ -42,7 +45,7 @@ const SignUp = () => {
             required
           />
 
-          <button type="submit" className="submit-btn">
+          <button type="submit" className="submit-btn" onClick={handleSignUpRedirect}>
             Sign Up
           </button>
         </form>
