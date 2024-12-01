@@ -13,6 +13,9 @@ const Login = () => {
     e.preventDefault();
     alert("Login Successful!");
   };
+  const handleDashboardRedirect = () => {
+    navigate("/dashboard");
+  };
 
   return (
     <div className="login-container">
@@ -45,7 +48,7 @@ const Login = () => {
             </a>
           </div>
 
-          <button type="submit" className="submit-btn">
+          <button type="submit" className="submit-btn" onClick={handleDashboardRedirect}>
             Sign in
           </button>
         </form>
