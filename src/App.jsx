@@ -1,19 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LandingPage from "./components/LandingPage";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import DashboardPage from "./components/DashboardPage";
+import Lp from "./components/Lp";
+import Register from "./components/Register";
+import SignIn from "./components/SignIn";
+import Dp from "./components/Dp";
+
 const App = () => {
   return (
     <div>
       
       <Router>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/" element={<Lp />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/signup" element={<Register />} />
+        <Route path="/dashboard" element={<Dp />} />
       </Routes>
     </Router>
     </div>

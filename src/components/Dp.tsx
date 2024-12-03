@@ -1,8 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import "./DashboardPage.css";
 
-
-const DashboardPage = () => {
+const Dp: FC = () => {
   return (
     <div className="dashboard-page">
       {/* Sidebar */}
@@ -28,9 +27,9 @@ const DashboardPage = () => {
             className="search-bar"
           />
           <div className="profile-section">
-            <img src= "p.png" alt="John Doe" className="profile-img" />
+            <img src="p.png" alt="John Doe" className="profile-img" />
             <span className="profile-name">John Doe</span>
-            <i className="fas fa-caret-up profile-caret"></i> 
+            <i className="fas fa-caret-up profile-caret"></i>
           </div>
         </header>
 
@@ -91,4 +90,4 @@ const DashboardPage = () => {
   );
 };
 
-export default DashboardPage;
+export default Dp;

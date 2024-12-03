@@ -1,19 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
-const Login = () => {
+const SignIn: FC = () => {
   const navigate = useNavigate();
 
-  const handleSignUpRedirect = () => {
+  const handleSignUpRedirect = (): void => {
     navigate("/signup");
   };
 
-  const handleLoginSubmit = (e) => {
+  const handleLoginSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     alert("Login Successful!");
   };
-  const handleDashboardRedirect = () => {
+
+  const handleDashboardRedirect = (): void => {
     navigate("/dashboard");
   };
 
@@ -23,7 +24,10 @@ const Login = () => {
       <div className="form-container">
         <div className="toggle-buttons">
           <button className="toggle-btn login-btn active">Login</button>
-          <button className="toggle-btn signup-btn" onClick={handleSignUpRedirect}>
+          <button
+            className="toggle-btn signup-btn"
+            onClick={handleSignUpRedirect}
+          >
             Sign Up
           </button>
         </div>
@@ -48,7 +52,11 @@ const Login = () => {
             </a>
           </div>
 
-          <button type="submit" className="submit-btn" onClick={handleDashboardRedirect}>
+          <button
+            type="submit"
+            className="submit-btn"
+            onClick={handleDashboardRedirect}
+          >
             Sign in
           </button>
         </form>
@@ -57,4 +65,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignIn;
